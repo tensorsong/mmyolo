@@ -66,8 +66,9 @@ def get_image_info(yolo_image_dir, idx, file_name):
     img_path = osp.join(yolo_image_dir, file_name)
     check_existence(img_path)
 
-    img = mmcv.imread(img_path)
-    height, width = img.shape[:2]
+    # img = mmcv.imread(img_path)
+    # height, width = img.shape[:2]
+    height, width = 720, 1280
     img_info_dict = {
         'file_name': file_name,
         'id': idx,
